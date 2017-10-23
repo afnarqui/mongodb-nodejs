@@ -26,7 +26,7 @@ var router = express.Router()
     });
   });
 
-  router.get('/cargos', function(req, res, next) {
+  router.get(`/${req.nombre}`, function(req, res, next) {
     cargos.find(function (err, login) {
       if (err) return next(err);
       res.json(login);
