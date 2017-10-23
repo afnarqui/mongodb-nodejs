@@ -14,7 +14,7 @@ mongoose.Promise = global.Promise;
 
 var bd;
 
-bd = mongoose.connect("mongodb://192.190.42.119:27017/prueba", {
+bd = mongoose.connect("mongodb://localhost:27017/prueba", {
   useMongoClient: true,
 });
 
