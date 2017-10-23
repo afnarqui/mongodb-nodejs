@@ -6,7 +6,8 @@ var path = require('path')
 var config = require('./config')
 var app = express()
 
-var rooter = require('./router/rooter')
+var rooter = require('./router/router')
+
 var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
