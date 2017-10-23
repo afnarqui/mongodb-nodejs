@@ -30,6 +30,6 @@ app.use(bodyParser.urlencoded({
 
 app.use('/',router)
 
-app.listen(config.port, () => console.log(` servidor corriendo por el puerto ${config.port}`))
+app.listen(8989, () => console.log(` servidor corriendo por el puerto ${config.port}`))
 
 
