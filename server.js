@@ -5,6 +5,7 @@ var cors = require('cors')
 var path = require('path')
 var config = require('./config')
 var app = express()
+var cors = require('cors')
 
 var router = require('./router/router')
 
@@ -35,6 +36,7 @@ mongoose.connection.on('connected', function () {
 // mongoose.connection.on('connected', function () {
 //   console.log('mongoose conectado')
 // })
+app.use(cors())
 app.use(express.static(path.join(__dirname,'public')))
 app.use(cors())
 app.use(bodyParser.json())
@@ -44,6 +46,6 @@ app.use(bodyParser.urlencoded({
 
 app.use('/',router)
 
-app.listen(80, () => console.log(` servidor corriendo por el puerto 8989`))
+app.listen(8989, () => console.log(` servidor corriendo por el puerto 8989`))
 
 
