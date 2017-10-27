@@ -2,14 +2,32 @@ var express = require('express')
 var ajustesVentasDiarias = require('../models/ajustesVentasDiarias')
 var login = require('../models/login')
 var cargos = require('../models/cargos')
+
+
 var productos = require('../models/productos')
+var lineas = require('../models/lineas')
+
+
 
 var router = express.Router()
 
 
 /*********** prueba */
 
+router.post('/lineas', function(req, res, next){
 
+  lineas.create(req.body, function(err,data){
+    if (err) return next(err)
+    res.json(data)
+  })
+})
+
+router.get('/lineas', function(req, res, next) {
+  lineas.find(function (err, data) {
+    if (err) return next(err);
+    res.json(data);
+  });
+});  
 
 router.get('/productos', function(req, res, next) {
   productos.find(function (err, data) {
