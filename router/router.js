@@ -14,6 +14,13 @@ var router = express.Router()
 
 /*********** prueba */
 
+router.get('/productos/:linea', function(req, res, next) {
+  productos.find({"linea":req.params.linea},function (err, data) {
+    if (err) return next(err);
+    res.json(data);
+  });
+});  
+
 router.post('/lineas', function(req, res, next){
 
   lineas.create(req.body, function(err,data){
