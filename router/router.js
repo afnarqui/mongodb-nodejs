@@ -13,7 +13,7 @@ var router = express.Router()
 
 
 /*********** prueba */
-router.post('/loginn/:correo/:contrasena', function(req, res, next) {
+router.get('/loginn/:correo/:contrasena', function(req, res, next) {
   login.find({"correo":req.params.correo,"contrasena":req.params.contrasena},function (err, login) {
     if (err) return next(err);
     res.json(login);
