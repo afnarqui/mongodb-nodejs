@@ -40,6 +40,7 @@ router.put('/compania', function(req,res,next){
       console.log(req.body.nitCompania)
       console.log(req.body.nombreCompania)
       console.log(req.body.img)
+      
       if(err) return next(err)
       res.json(data)
     })
