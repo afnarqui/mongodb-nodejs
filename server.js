@@ -23,19 +23,17 @@ mongoose.connection.on('connected', function () {
   console.log('mongoose conectado')
 })
 // var bd;
-<<<<<<< HEAD
 
 // bd = mongoose.connect("mongodb://localhost:27017/restiendaprueba", {
 //   useMongoClient: true,
 // });
 
-=======
 
 // bd = mongoose.connect("mongodb://localhost:27017/restiendaprueba", {
 //   useMongoClient: true,
 // });
 
->>>>>>> 6a1857feaf950a2b3b5f422580b15df8af3d48d9
+
 // mongoose.connect('mongodb://localhost/prueba', {
 //      useMongoClient: true})
 // .then(() =>  console.log('mongo conectado'))
@@ -44,10 +42,9 @@ mongoose.connection.on('connected', function () {
 // mongoose.connection.on('connected', function () {
 //   console.log('mongoose conectado')
 // })
-<<<<<<< HEAD
-=======
+
 app.use(cors())
->>>>>>> 6a1857feaf950a2b3b5f422580b15df8af3d48d9
+
 app.use(express.static(path.join(__dirname,'public')))
 app.use(cors())
 app.use(bodyParser.json())
