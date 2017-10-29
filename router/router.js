@@ -35,7 +35,7 @@ router.put('/compania', function(req,res,next){
   
   router.post('/companias', function(req,res,next){
   
-    compania.create(req.body, function(err,data){
+    compania.create(req.body.img, function(err,data){
       console.log(req.body.codigoCompania)
       console.log(req.body.nitCompania)
       console.log(req.body.nombreCompania)
