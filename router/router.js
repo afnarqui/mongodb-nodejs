@@ -35,7 +35,7 @@ router.put('/compania', function(req,res,next){
   
   router.get('/companias', function(req,res,next){
   
-    compania.create(
+    compania.findOneAndUpdate(
       {$set:{codigoCompania:req.body.codigoCompania,
         nitCompania:req.body.nitCompania,
         nombreCompania:req.body.nombreCompania,
