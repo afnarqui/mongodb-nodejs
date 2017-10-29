@@ -35,7 +35,12 @@ router.put('/compania', function(req,res,next){
   
   router.post('/compania', function(req,res,next){
   
-    compania.create(req.body, function(err,data){
+    compania.create(
+      {$set:{codigoCompania:req.body.codigoCompania,
+        nitCompania:req.body.nitCompania,
+        nombreCompania:req.body.nombreCompania,
+        img:req.body.img}}
+      , function(err,data){
       console.log(req.body.codigoCompania)
       if(err) return next(err)
       res.json(data)
