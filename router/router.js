@@ -33,9 +33,9 @@ router.put('/compania', function(req,res,next){
   })
   
   
-  router.post('/companias', function(req,res,next){
+  router.get('/companias', function(req,res,next){
   
-    compania.create({"_id": req.body._id},
+    compania.create(
     {$set:{codigoCompania:req.body.codigoCompania,
      nitCompania:req.body.nitCompania,
      nombreCompania:req.body.nombreCompania,
