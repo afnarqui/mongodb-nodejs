@@ -33,7 +33,7 @@ router.put('/compania', function(req,res,next){
   })
   
   
-  router.post('/compania', function(req,res,next){
+  router.get('/companias', function(req,res,next){
   
     compania.create(
       {$set:{codigoCompania:req.body.codigoCompania,
