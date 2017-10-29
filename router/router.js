@@ -35,12 +35,15 @@ router.put('/compania', function(req,res,next){
   
   router.post('/companias', function(req,res,next){
   
-    compania.findOneAndUpdate({"_id": req.body._id},
+    compania.create({"_id": req.body._id},
     {$set:{codigoCompania:req.body.codigoCompania,
      nitCompania:req.body.nitCompania,
      nombreCompania:req.body.nombreCompania,
      img:req.body.img}}, function(err,data){
       console.log(req.body.codigoCompania)
+      console.log(req.body.nitCompania)
+      console.log(req.body.nombreCompania)
+      console.log(req.body.img)
       if(err) return next(err)
       res.json(data)
     })
